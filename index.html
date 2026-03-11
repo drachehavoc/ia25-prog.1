@@ -16,6 +16,7 @@
 
     :root {
       --grid-info-size: 230px;
+      --color-bg-hi: pink;
     }
 
     html,
@@ -53,7 +54,7 @@
       }
 
       section {
-        background-color: lightcoral;
+        background-color: var(--color-bg-hi);
         width: 100%;
         height: 100%;
         margin-top: -4rem;
@@ -69,9 +70,14 @@
       isolation: isolate;
       padding: 1rem;
 
+      h1 {
+        margin: 0 0 5rem 0;
+        font-size: 5rem;
+      }
+
       &:before {
-        content: "ZZZZZZZ";
-        background-color: red;
+        content: "";
+        background-color: var(--color-bg-hi);
         position: absolute;
         inset: 0;
         z-index: -1;
