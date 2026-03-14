@@ -1,6 +1,4 @@
 {
-  description = "Aula Dev - Web Dev";
-
   inputs = {
     nixpkgs.url     = "github:nixos/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -25,8 +23,7 @@
           export GIT_COMMITTER_NAME="$USER"
           export GIT_AUTHOR_EMAIL="$USER@localhost"
           export GIT_COMMITTER_EMAIL="$USER@localhost"
-          
-          export PS1="(ia25-prog.1) $ "
+	  export PSX="ia25~prog.1"
         '';
       };
     });
