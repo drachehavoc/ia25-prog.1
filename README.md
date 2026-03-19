@@ -12,5 +12,7 @@
 
 function
 method
+method set
+method get
 variable
 attribute

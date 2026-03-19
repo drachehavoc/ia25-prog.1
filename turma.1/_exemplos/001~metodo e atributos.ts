@@ -1,14 +1,19 @@
-// function soma(a: number, b: number) {
-//   return a + b
-// }
+console.log('# Exemplo: função e variavel')
 
-// let x = soma(20, 30)
-// console.log(x)
+function soma(a: number, b: number) {
+  return a + b
+}
 
-// let y = soma(30, 30)
-// console.log(y)
+let x = soma(20, 30)
+console.log(x)
+
+let y = soma(30, 30)
+console.log(y)
 
 // ---------------------------------------
+
+console.log("# Exemplo: método e atributo");
+
 
 class Z {
   resultado: number = 0
