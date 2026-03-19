@@ -12,6 +12,7 @@
 
 function
 method
+*method constructor
 method set
 method get
 variable

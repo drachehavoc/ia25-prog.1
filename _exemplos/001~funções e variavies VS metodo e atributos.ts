@@ -1,3 +1,7 @@
+export {}
+
+// ----------------------------------------------------------------------------
+
 console.log('# Exemplo: função e variavel')
 
 function soma(a: number, b: number) {
@@ -10,7 +14,7 @@ console.log(x)
 let y = soma(30, 30)
 console.log(y)
 
-// ---------------------------------------
+// ----------------------------------------------------------------------------
 
 console.log("# Exemplo: método e atributo");
 
