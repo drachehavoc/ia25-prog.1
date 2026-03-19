@@ -1,1 +1,16 @@
-# ia25-prog.1
+# ia25-prog.1 (tópicos para Garatujas)
+
+# JS (pro eu do futuro)
+
+...
+
+# CSS (pro eu do futuro)
+
+...
+
+# Java vs JS (Javascript) vs TS (TypeScript)
+
+function
+method
+variable
+attribute
