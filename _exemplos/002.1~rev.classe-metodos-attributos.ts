@@ -1,3 +1,5 @@
+export { }
+
 class Triangulo {
   lado1: number;
   lado2: number;
@@ -11,6 +13,7 @@ class Triangulo {
     ) {
       throw new Error("O valores não formam um triângulo válido");
     }
+
     this.lado1 = pLado1;
     this.lado2 = pLado2;
     this.lado3 = pLado3;
@@ -42,8 +45,15 @@ class Triangulo {
   }
 }
 
-const equilatero = new Triangulo(10, 10, 10);
-const isosceles = new Triangulo(10, 10, 5);
-const escaleno = new Triangulo(10, 5, 3);
 
-console.log(equilatero.tipo, equilatero.area);
+const tri1 = new Triangulo(10, 10, 10);
+const tri2 = new Triangulo(10, 10, 5);
+const tri3 = new Triangulo(10, 5, 6);
+
+tri1.lado1 = 20;
+tri1.lado2 = 20;
+tri1.lado3 = 20;
+
+console.log(tri1.tipo, tri1.perimetro);
+console.log(tri2.tipo, tri2.perimetro);
+console.log(tri3.tipo, tri3.perimetro);
