@@ -23,7 +23,7 @@
           export GIT_COMMITTER_NAME="$USER"
           export GIT_AUTHOR_EMAIL="$USER@localhost"
           export GIT_COMMITTER_EMAIL="$USER@localhost"
-	  export PSX="ia25~prog.1"
+	        export PSX="ia25~prog.1"
         '';
       };
     });

@@ -10,10 +10,11 @@
 
 # Java vs JS (Javascript) vs TS (TypeScript)
 
-function
-method
+classe 
+objeto (instancia da classe)
+variable vs attribute
+function vs method
+
 *method constructor
 method set
 method get
-variable
-attribute
