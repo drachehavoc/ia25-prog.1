@@ -110,7 +110,7 @@ class Quadrilatero {
 
 Então, para criar objetos a partir de uma classe, é necessário instanciá-la usando a palavra-chave `new`. O objeto resultante deve ser associado a uma variável ou constante para que você possa acessar seus atributos e métodos.
 
-veja o exemplo abaixo, onde criamos um objeto do tipo `Quadrilatero` e acessamos seus métodos:
+veja o exemplo abaixo, onde criamos objetos do tipo `Quadrilatero` e definimos valores para seus atributos, além de acessar seus métodos para calcular a área e verificar se é um quadrado:
 
 ```typescript
 // Cria um objeto do tipo Quadrilatero e associa a uma constante q1
