@@ -82,7 +82,7 @@ Por isso, usamos `this`, que sempre faz referência ao objeto atual, independent
 >
 > |                                              `const minhaReferencia` | `=` | `new MinhaClasse()`                                                                                                                     |
 > | -------------------------------------------------------------------: | :-: | :-------------------------------------------------------------------------------------------------------------------------------------- |
-> | Variável (ou constante) à qual a referência do objeto será atribuída |  ←  | Criação de um objeto a partir da classe `MinhaClasse`. A expressão retorna a referência do objeto criado, que será atribuída à variável |
+> | Variável (ou constante) à qual a referência do objeto será atribuída |  ←  | Criação de um objeto a partir da classe `MinhaClasse`. A expressão retorna a referência do objeto criado, que será atribuída à variável, aqui `minhaReferencia` ainda não foi definida, por isso usamos `this` dentro da classe para referenciar o objeto atual, independentemente do nome da variável utilizada para armazenar sua referência no futuro.
 
 
 ## Prática: Exemplo de classe e objetos em TypeScript
