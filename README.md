@@ -46,7 +46,7 @@ Além disso, os próprios conceitos de classe e objeto são fundamentais na POO 
 **Objeto**: é uma instância de uma classe (ou seja, uma "materialização" da classe). Ele possui as características e comportamentos definidos pela classe. Cada objeto pode ter valores diferentes para os atributos definidos na classe.
 
 > [!NOTE]
-> 🧩 **Analogia**
+> 🧩 **Analogia** <br>
 > A Programação Estruturada é como uma receita de bolo, onde você tem uma lista de ingredientes (variáveis) e um conjunto de instruções (funções) para preparar o bolo.  
 > Já a Programação Orientada a Objetos é como um conjunto de peças de LEGO, onde cada peça representa um objeto com suas próprias características (atributos) e comportamentos (métodos), que podem ser combinadas para construir algo mais complexo.
 
