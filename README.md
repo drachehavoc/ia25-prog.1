@@ -146,13 +146,11 @@ console.log(q2.eQuadrado()); // Saída: true
 
 Note que no exemplo acima, criamos dois objetos do tipo `Quadrilatero` (q1 e q2) e atribuímos valores diferentes para seus atributos. Em seguida, acessamos o método `calcularArea()` de cada objeto distinto para obter a área correspondente. O resultado é diferente para cada objeto, demonstrando que cada objeto tem seus próprios valores de atributos lado1 e lado2, mesmo que ambos sejam instâncias da mesma classe `Quadrilatero`. Isso é um dos principais conceitos da POO: cada objeto é uma instância única de uma classe, com seus próprios dados e comportamentos.
 
-> **⚠️ Nota:**
->
+> [!NOTE]
 > O exemplo acima é apenas uma ilustração básica de como criar objetos a partir de uma classe e acessar seus métodos. Em um cenário real, é comum uso de diversas outras funcionalidades da POO, mas para fins de compreensão, o exemplo foi mantido o mais simples possível.
 
 
-> **⚠️ Nota:**
->
+> [!Nota]
 > O acesso aos atributos e métodos de um objeto é feito utilizando a notação de ponto (`.`). Por exemplo, `q1.lado1` acessa o atributo `lado1` do objeto `q1`, e `q1.calcularArea()` chama o método `calcularArea()` do mesmo objeto. Essa notação é fundamental para interagir com os objetos criados a partir de uma classe.
 
 > **📝 Recapitulando:**
@@ -235,12 +233,10 @@ console.log(q2.calcularPerimetro()); // Saída: 28
 console.log(q2.eQuadrado()); // Saída: true
 ```
 
-> **⚠️ Nota:**
->
+> [!Nota]
 > Nos exemplos acima, o construtor é utilizado para garantir que os objetos sejam criados com os valores necessários para que possam funcionar corretamente. Mas vale ressaltar que o construtor permite a execução de qualquer código necessário para configurar o estado inicial do objeto, não se limitando apenas à atribuição de valores aos atributos. Ele pode incluir validações, chamadas a outros métodos, ou qualquer lógica necessária para garantir que o objeto seja criado em um estado consistente e funcional.
 
-> **⚠️ Nota:**
->
+> [!Nota]
 > A omissão do construtor em uma classe não impede a criação de objetos a partir dessa classe, mas pode resultar em objetos incompletos ou sem funcionalidade, dependendo do contexto. Se a classe não tiver um construtor definido, o TypeScript fornecerá um construtor padrão que não recebe parâmetros e não inicializa os atributos. Isso pode ser problemático se os atributos forem essenciais para o funcionamento do objeto, pois eles permanecerão indefinidos ou com valores padrão (como `undefined` para tipos primitivos), o que pode levar a erros durante a execução do programa.
 
 ## Herança
@@ -276,8 +272,7 @@ console.log(quadrado1.calcularPerimetro()); // Saída: 20
 console.log(quadrado1.eQuadrado()); // Saída: true
 ```
 
-> **⚠️ Nota:**
->
+> [!Nota]
 > A palavra “herança” pode ser um pouco confusa, pois não significa que a subclasse “herda” fisicamente o código da superclasse. Na prática, ela passa a ter acesso aos atributos e métodos definidos na superclasse.
 >
 > Ou seja, a subclasse pode utilizar os recursos da superclasse como se fossem seus, mas o código não é copiado. A herança é uma relação entre classes, em que a subclasse reutiliza comportamentos da superclasse sem duplicação de código.
