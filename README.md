@@ -153,8 +153,7 @@ Note que no exemplo acima, criamos dois objetos do tipo `Quadrilatero` (q1 e q2)
 > [!NOTE]
 > O acesso aos atributos e métodos de um objeto é feito utilizando a notação de ponto (`.`). Por exemplo, `q1.lado1` acessa o atributo `lado1` do objeto `q1`, e `q1.calcularArea()` chama o método `calcularArea()` do mesmo objeto. Essa notação é fundamental para interagir com os objetos criados a partir de uma classe.
 
-> **📝 Recapitulando:**
->
+> [!EXAMPLE]
 > |            |  Descrição   |
 > | ---------- | ------------ |
 > | `classe`   | molde ou estrutura que define as características e comportamentos de um tipo específico de objeto. |
