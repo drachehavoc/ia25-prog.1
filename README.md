@@ -50,7 +50,7 @@ A POO permite organizar o código de forma modular e reutilizável, facilitando 
   - [ ] Associação  
   - [ ] Agregação
 
-> O conteúdo marcado com "`[x]`" já foi abordado, enquanto o conteúdo marcado com "`[ ]`" ainda será tratado em futuras versões deste texto.
+> O conteúdo marcado com "<input type="checkbox" checked disabled>" já foi abordado, enquanto o conteúdo marcado com "<input type="checkbox" disabled>" ainda será tratado em futuras versões deste texto.
 
 ## Conhecimento prévio necessário
 
