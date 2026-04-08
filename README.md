@@ -1,3 +1,25 @@
+# Entragas 1º Trimestre
+
+- Garatujas com os Seguintes Tópicos:
+  - Revisão Webdesign
+    - HTML (pro eu do futuro)
+    - CSS (pro eu do futuro)
+    - JS (pro eu do futuro)
+  - Diferenças entre Java, JS (Javascript) e TS (TypeScript)
+  - POO
+    - Classe
+    - Objeto
+    - Atributo
+    - Método
+    - Getters e Setters
+    - Construtor
+    - Herança
+    - Encapsulamento
+    - Polimorfismo
+- Leitura e melhorias dos textos:
+  - 1. Programação 1 - Programação Orientada a Objetos (POO)
+
+
 # Programação 1 - Programação Orientada a Objetos (POO)
 
 ## O que é POO?
@@ -8,13 +30,26 @@ A POO permite organizar o código de forma mais modular e reutilizável, facilit
 
 ## Conceitos fundamentais da POO
 
-- Classe
-- Objeto
-- Atributo
-- Método
-- Encapsulamento
-- Herança
-- Polimorfismo
+- Classe  
+  - Classes Abstratas  
+  - Interface  
+- Objeto  
+- Atributo  
+- Método  
+  - Sobrescrita de método (override)  
+  - Sobrecarga (overload)  
+- Getters e Setters  
+- Encapsulamento  
+  - Modificadores de acesso (`public`, `private`, `protected`)  
+  - Imutabilidade (`readonly`)  
+- Construtor  
+- Métodos Estáticos (`static`)  
+- Herança  
+- Composição  
+  - Associação  
+  - Agregação  
+- Polimorfismo  
+- Abstração  
 
 ## Conhecimento prévio necessário
 
@@ -362,6 +397,133 @@ quadradoInconsistente.lado1 = 10;
 ```
 
 Mas isso leva a outra situação adversa, pois existem caso que se faz necessário acessar ou modificar os atributos privados, por isso existem os métodos de acesso (getters e setters) que permitem controlar o acesso aos atributos privados, garantindo que as modificações sejam feitas de forma controlada e consistente.
+
+## Getters e Setters
+
+Os **getters** e **setters** são métodos usados para ler e alterar atributos privados de forma controlada.
+
+- **Getter**: retorna o valor de um atributo.
+- **Setter**: altera o valor de um atributo, podendo aplicar validações antes da alteração.
+
+Isso mantém o encapsulamento, pois o atributo continua privado, mas a classe ainda oferece uma forma segura de interação.
+
+Considere o exemplo abaixo:
+
+```typescript
+class Quadrilatero {
+  private lado1: number;
+  private lado2: number;
+
+  constructor(paramLado1: number, paramLado2: number) {
+    this.setLado1(paramLado1);
+    this.setLado2(paramLado2);
+  }
+
+  getLado1(): number {
+    return this.lado1;
+  }
+
+  getLado2(): number {
+    return this.lado2;
+  }
+
+  setLado1(novoLado1: number): void {
+    if (novoLado1 <= 0) {
+      throw new Error("lado1 deve ser maior que zero.");
+    }
+    this.lado1 = novoLado1;
+  }
+
+  setLado2(novoLado2: number): void {
+    if (novoLado2 <= 0) {
+      throw new Error("lado2 deve ser maior que zero.");
+    }
+    this.lado2 = novoLado2;
+  }
+
+  calcularArea(): number {
+    return this.lado1 * this.lado2;
+  }
+}
+```
+
+Uso:
+
+```typescript
+const q = new Quadrilatero(5, 10);
+
+console.log(q.getLado1()); // Saída: 5
+console.log(q.getLado2()); // Saída: 10
+
+q.setLado1(8);
+console.log(q.calcularArea()); // Saída: 80
+
+// q.setLado2(-3); // Erro: lado2 deve ser maior que zero.
+```
+
+> [!NOTE]
+> O principal benefício dos setters não é apenas “trocar valor”, mas sim **garantir regras de negócio** (por exemplo, impedir valores inválidos).
+
+> [!TIP]
+> Em TypeScript também existe a sintaxe `get` e `set` (como propriedades), mas o uso de métodos explícitos `getX()` e `setX()` costuma ser mais didático no início do aprendizado de POO.
+
+| Método | Função |
+| ------ | ------ |
+| Getter | Permite leitura controlada do atributo privado. |
+| Setter | Permite escrita controlada do atributo privado com validação. |
+
+### Getters e Setters em Javascript/TypeScript
+
+Em javascript e typescript, é possível usar a sintaxe de propriedades para criar getters e setters de forma mais elegante. isso permite acessar os getters e setters como se fossem atributos comuns, mas na verdade eles são métodos que executam lógica adicional.
+
+```typescript
+class Quadrilatero {
+  private _lado1: number;
+  private _lado2: number;
+
+  constructor(paramLado1: number, paramLado2: number) {
+    this.lado1 = paramLado1; // Usando o setter
+    this.lado2 = paramLado2; // Usando o setter
+  }
+
+  get lado1(): number {
+    return this._lado1;
+  }
+
+  set lado1(novoLado1: number) {
+    if (novoLado1 <= 0) {
+      throw new Error("lado1 deve ser maior que zero.");
+    }
+    this._lado1 = novoLado1;
+  }
+
+  get lado2(): number {
+    return this._lado2;
+  }
+
+  set lado2(novoLado2: number) {
+    if (novoLado2 <= 0) {
+      throw new Error("lado2 deve ser maior que zero.");
+    }
+    this._lado2 = novoLado2;
+  }
+
+  get area(): number {
+    return this.lado1 * this.lado2; // Usando os getters
+  }
+}
+
+> [!TIP]
+> `area`, `lado1` e `lado2` são propriedades, mas na verdade necessitam de lógica adicional para leitura e escrita, por isso são implementados como getters e setters. Isso permite acessar `q.area` como se fosse um atributo, mas na verdade ele executa a lógica de cálculo da área.
+
+## Métodos e atributos estáticos
+
+Métodos e atributos estáticos pertencem à classe em si, e não a instâncias específicas. Eles podem ser acessados diretamente pela classe, sem a necessidade de criar um objeto.
+
+Eles existem para representar comportamentos ou características que são comuns a todas as instâncias da classe, ou para fornecer funcionalidades auxiliares relacionadas à classe, mas que **não dependem do estado de um objeto específico**.
+
+
+
 
 ... [isso é tema para a próxima aula] ... see you space cowboy!
 
