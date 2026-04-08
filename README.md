@@ -29,28 +29,28 @@ A POO permite organizar o código de forma modular e reutilizável, facilitando 
 
 ## Conceitos fundamentais da POO
 
-- [x] Classe  
-- [x] Objeto  
-- [x] Atributo  
-- [x] Método  
-  - [ ] Sobrescrita (override)    
-  - [ ] Sobrecarga (overload)  
-- [x] Getters e Setters  
-- [x] Encapsulamento  
-  - [x] Modificadores de acesso (`public`, `private`, `protected`)  
-  - [ ] Imutabilidade (`readonly`)  
-- [x] Construtor  
-- [x] Métodos e Atributos estáticos (`static`)  
-- [x] Herança  
-- [ ] Polimorfismo  
-- [ ] Abstração  
-  - [ ] Classes abstratas  
-  - [ ] Interface  
-- [ ] Composição  
-  - [ ] Associação  
-  - [ ] Agregação
+- ☑ Classe  
+- ☑ Objeto  
+- ☑ Atributo  
+- ☑ Método  
+  - ☐ Sobrescrita (override)    
+  - ☐ Sobrecarga (overload)  
+- ☑ Getters e Setters  
+- ☑ Encapsulamento  
+  - ☑ Modificadores de acesso (`public`, `private`, `protected`)  
+  - ☐ Imutabilidade (`readonly`)  
+- ☑ Construtor  
+- ☑ Métodos e Atributos estáticos (`static`)  
+- ☑ Herança  
+- ☐ Polimorfismo  
+- ☐ Abstração  
+  - ☐ Classes abstratas  
+  - ☐ Interface  
+- ☐ Composição  
+  - ☐ Associação  
+  - ☐ Agregação
 
-> O conteúdo marcado com "<input type="checkbox" checked disabled>" já foi abordado, enquanto o conteúdo marcado com "<input type="checkbox" disabled>" ainda será tratado em futuras versões deste texto.
+> Conteúdo já abordado nesta versão do texto estão marcados com ☑, enquanto tópicos a serem abordados em versões futuras estão marcados com ☐.
 
 ## Conhecimento prévio necessário
 
