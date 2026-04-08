@@ -1,11 +1,11 @@
-# Entragas 1º Trimestre
+# Entregas do 1º Trimestre
 
-- Garatujas com os Seguintes Tópicos:
+- Garatujas com os seguintes tópicos:
   - Revisão Webdesign
-    - HTML (pro eu do futuro)
-    - CSS (pro eu do futuro)
-    - JS (pro eu do futuro)
-  - Diferenças entre Java, JS (Javascript) e TS (TypeScript)
+    - HTML (para o eu do futuro)
+    - CSS (para o eu do futuro)
+    - JS (para o eu do futuro)
+  - Diferenças entre Java, JS (JavaScript) e TS (TypeScript)
   - POO
     - Classe
     - Objeto
@@ -17,21 +17,20 @@
     - Encapsulamento
     - Polimorfismo
 - Leitura e melhorias dos textos:
-  - 1. Programação 1 - Programação Orientada a Objetos (POO)
-
+  - Programação 1 - Programação Orientada a Objetos (POO)
 
 # Programação 1 - Programação Orientada a Objetos (POO)
 
 ## O que é POO?
 
-É um paradigma de programação que se baseia na abstração do mundo real, utilizando o conceito de objetos, que são instâncias de classes. As classes, por sua vez, representam categorias ou modelos de entidades do mundo real. 
+A Programação Orientada a Objetos (POO) é um paradigma de programação baseado na abstração do mundo real, utilizando o conceito de objetos, que são instâncias de classes. As classes, por sua vez, representam categorias ou modelos de entidades.
 
-A POO permite organizar o código de forma mais modular e reutilizável, facilitando a manutenção e a evolução do sistema, além de ajudar na modelagem de problemas complexos.
+A POO permite organizar o código de forma modular e reutilizável, facilitando a manutenção e a evolução do sistema, além de contribuir para a modelagem de problemas complexos.
 
 ## Conceitos fundamentais da POO
 
 - Classe  
-  - Classes Abstratas  
+  - Classes abstratas  
   - Interface  
 - Objeto  
 - Atributo  
@@ -43,7 +42,7 @@ A POO permite organizar o código de forma mais modular e reutilizável, facilit
   - Modificadores de acesso (`public`, `private`, `protected`)  
   - Imutabilidade (`readonly`)  
 - Construtor  
-- Métodos Estáticos (`static`)  
+- Métodos estáticos (`static`)  
 - Herança  
 - Composição  
   - Associação  
@@ -57,7 +56,7 @@ A POO permite organizar o código de forma mais modular e reutilizável, facilit
 - Programação estruturada
 - Variáveis e tipos de dados
 - Funções e procedimentos
-- Estruturas de controle (if, for, while, etc.)
+- Estruturas de controle (`if`, `for`, `while`, etc.)
 
 ## Programação Estruturada (PE) vs Programação Orientada a Objetos (POO)
 
@@ -68,40 +67,37 @@ Na programação estruturada, o foco está na criação de funções e procedime
 | Variáveis vs Atributos | Variáveis são usadas para armazenar dados.           | Atributos armazenam dados dentro de um objeto ou classe.                                    |
 | Funções vs Métodos     | Funções são blocos de código que realizam uma tarefa | Métodos são funções associadas a um objeto ou classe e podem acessar seus atributos.        |
 
-A tabela acima apresenta algumas comparações entre programação estruturada e programação orientada a objetos. No entanto, é importante destacar que a POO possui conceitos que não têm equivalentes diretos na programação estruturada, como encapsulamento, herança e polimorfismo. 
+A tabela apresenta comparações introdutórias entre programação estruturada e programação orientada a objetos. No entanto, a POO possui conceitos sem equivalentes diretos na programação estruturada, como encapsulamento, herança e polimorfismo.
 
-Além disso, os próprios conceitos de classe e objeto são fundamentais na POO e não possuem equivalentes diretos na programação estruturada.
+Além disso, os conceitos de classe e objeto são fundamentais na POO e não possuem correspondência direta na programação estruturada.
 
 ## Classe e Objeto
 
-**Classe**: é um molde ou uma estrutura que define as características e comportamentos de um tipo específico de objeto. Ela serve como um modelo para criar objetos. 
+**Classe**: molde ou estrutura que define as características e os comportamentos de um tipo específico de objeto. Ela atua como modelo para criação de instâncias.
 
-É possível pensar em uma classe como um plano ou projeto que descreve como os objetos devem ser criados e como devem se comportar. Ou seja, ela reside no nível da abstração, onde definimos características e comportamentos comuns a um grupo de objetos.
-
-**Objeto**: é uma instância de uma classe (ou seja, uma "materialização" da classe). Ele possui as características e comportamentos definidos pela classe. Cada objeto pode ter valores diferentes para os atributos definidos na classe.
+**Objeto**: instância de uma classe, isto é, uma materialização da estrutura definida. Cada objeto pode possuir valores diferentes para os atributos da mesma classe.
 
 > [!NOTE]
 > Analogia:
-> A Programação Estruturada é como uma receita de bolo, onde você tem uma lista de ingredientes (variáveis) e um conjunto de instruções (funções) para preparar o bolo.  
-> Já a Programação Orientada a Objetos é como um conjunto de peças de LEGO, onde cada peça representa um objeto com suas próprias características (atributos) e comportamentos (métodos), que podem ser combinadas para construir algo mais complexo.
+> A Programação Estruturada pode ser comparada a uma receita de bolo, com ingredientes (variáveis) e instruções (funções).  
+> A Programação Orientada a Objetos pode ser comparada a peças de LEGO, em que cada peça representa um objeto com características (atributos) e comportamentos (métodos), combináveis para formar estruturas mais complexas.
 
 ### A referência `this` dentro da classe
 
-Antes de continuar, é importante apresentar a palavra reservada `this`.
+A palavra reservada `this` é utilizada dentro de classes para referenciar o objeto atual (instância em execução).
 
-O `this` é utilizado dentro de classes para referenciar o objeto atual, ou seja, a instância que está sendo manipulada no momento. Ele permite acessar atributos e métodos do objeto mesmo ainda dentro da definição da classe.
+Considere o código: `const minhaReferencia = new MinhaClasse();`.
 
-Considere o seguinte código: `const minhaReferencia = new MinhaClasse();`.
+- O lado esquerdo (`const minhaReferencia`) é a variável que armazenará a referência do objeto.
+- O lado direito (`new MinhaClasse()`) cria o objeto e retorna sua referência.
 
-O lado esquerdo do `=` representa a variável (ou constante) que irá armazenar a referência para o objeto criado a partir da classe `MinhaClasse` (neste caso, a referência será armazenada na constante chamada `minhaReferencia`). Já o lado direito do `=` é a expressão responsável por criar esse objeto, utilizando a palavra-chave `new` seguida do nome da classe.
+Quando `new MinhaClasse()` é executado, um novo objeto é criado em memória e sua referência é atribuída à variável indicada.
 
-Quando `new MinhaClasse()` é executado, um novo objeto é criado na memória e sua referência é retornada. Essa referência é então atribuída à variável `minhaReferencia`.
+Por esse motivo, dentro da classe, utiliza-se `this` para acessar atributos e métodos da instância atual, independentemente do nome da variável externa que armazenará essa referência.
 
-Por este motivo, dentro da classe, o `this` é utilizado para se referir a essa instância específica do objeto que está sendo manipulada. Ele permite acessar e manipular seus atributos e métodos. Por exemplo, dentro de um método da classe, ao usar `this.atributo`, estamos acessando o atributo pertencente ao objeto que está sendo utilizado naquele momento, veja que enquanto a classe está sendo definida não é possível saber qual será o nome da variável que irá armazenar a referência do objeto criado a partir da classe, por isso usamos `this` para referenciar o objeto atual, independentemente do nome da variável utilizada para armazenar sua referência no futuro.
+*Por que usar `this` e não o nome da variável (como `minhaReferencia`)?*
 
-*Mas por que usamos `this` e não o nome da variável (como `minhaReferencia`)?*
-
-Isso acontece porque o nome da variável é definido fora da classe, e a classe não tem conhecimento sobre qual nome será utilizado. Podemos, por exemplo, criar vários objetos com nomes diferentes:
+Porque o nome da variável é definido fora da classe e pode variar:
 
 ```typescript
 const a = new MinhaClasse();
@@ -109,20 +105,18 @@ const b = new MinhaClasse();
 const c = new MinhaClasse();
 ```
 
-Dentro da classe, não faria sentido usar `a`, `b` ou `c`, pois esses nomes só existem fora dela.
-
-Por isso, usamos `this`, que sempre faz referência ao objeto atual, independentemente do nome da variável utilizada.
+Dentro da classe, os nomes `a`, `b` e `c` não existem. Portanto, usa-se `this`, que sempre referencia o objeto atual.
 
 > [!TIP]
 > Recapitulando:
+>
 > |                                              `const minhaReferencia` | `=` | `new MinhaClasse()`                                                                                                                     |
 > | -------------------------------------------------------------------: | :-: | :-------------------------------------------------------------------------------------------------------------------------------------- |
-> | Variável (ou constante) à qual a referência do objeto será atribuída |  ←  | Criação de um objeto a partir da classe `MinhaClasse`. A expressão retorna a referência do objeto criado, que será atribuída à variável, aqui `minhaReferencia` ainda não foi definida, por isso usamos `this` dentro da classe para referenciar o objeto atual, independentemente do nome da variável utilizada para armazenar sua referência no futuro.
+> | Variável (ou constante) à qual a referência do objeto será atribuída |  ←  | Criação de um objeto a partir da classe `MinhaClasse`. A expressão retorna a referência do objeto criado, atribuída à variável. Como o nome externo ainda não é conhecido dentro da classe, utiliza-se `this`. |
 
+## Prática: exemplo de classe e objetos em TypeScript
 
-## Prática: Exemplo de classe e objetos em TypeScript
-
-Imagine que queremos criar uma classe para representar quadriláteros, que são figuras geométricas com quatro lados. Podemos definir uma classe `Quadrilatero` com atributos para os lados e métodos para calcular a área, o perímetro e verificar se é um quadrado.
+Considere uma classe para representar quadriláteros, com atributos de lados e métodos para cálculo de área, perímetro e verificação de quadrado:
 
 ```typescript
 class Quadrilatero {
@@ -143,66 +137,45 @@ class Quadrilatero {
 }
 ```
 
-Então, para criar objetos a partir de uma classe, é necessário instanciá-la usando a palavra-chave `new`. O objeto resultante deve ser associado a uma variável ou constante para que você possa acessar seus atributos e métodos.
-
-veja o exemplo abaixo, onde criamos objetos do tipo `Quadrilatero` e definimos valores para seus atributos, além de acessar seus métodos para calcular a área e verificar se é um quadrado:
+Para criar objetos, utiliza-se `new`, associando o resultado a uma variável ou constante:
 
 ```typescript
-// Cria um objeto do tipo Quadrilatero e associa a uma constante q1
-const q1 = new Quadrilatero(); 
-
-// Atribui valor ao atributo lado1 do objeto (Quadrilatero) q1
+const q1 = new Quadrilatero();
 q1.lado1 = 5;
-
-// Atribui valor ao atributo lado2 do objeto (Quadrilatero) q1
 q1.lado2 = 10;
 
-// Cria outro objeto do tipo Quadrilatero e associa a uma constante q2
 const q2 = new Quadrilatero();
-
-// Atribui valor ao atributo lado1 do objeto (Quadrilatero) q2
 q2.lado1 = 7;
-
-// Atribui valor ao atributo lado2 do objeto (Quadrilatero) q2
 q2.lado2 = 7;
 
-// Acessa o método calcularArea do objeto q1 e imprime o resultado
 console.log(q1.calcularArea()); // Saída: 50
-
-// Acessa o método eQuadrado do objeto q1 e imprime o resultado
 console.log(q1.eQuadrado()); // Saída: false
 
-// Acessa o método calcularArea do objeto q2 e imprime o resultado
 console.log(q2.calcularArea()); // Saída: 49
-
-// Acessa o método eQuadrado do objeto q2 e imprime o resultado
 console.log(q2.eQuadrado()); // Saída: true
 ```
 
-Note que no exemplo acima, criamos dois objetos do tipo `Quadrilatero` (q1 e q2) e atribuímos valores diferentes para seus atributos. Em seguida, acessamos o método `calcularArea()` de cada objeto distinto para obter a área correspondente. O resultado é diferente para cada objeto, demonstrando que cada objeto tem seus próprios valores de atributos lado1 e lado2, mesmo que ambos sejam instâncias da mesma classe `Quadrilatero`. Isso é um dos principais conceitos da POO: cada objeto é uma instância única de uma classe, com seus próprios dados e comportamentos.
+Nesse exemplo, os objetos `q1` e `q2` pertencem à mesma classe, mas possuem estados diferentes. Isso evidencia que cada objeto é uma instância única.
 
 > [!NOTE]
-> O exemplo acima é apenas uma ilustração básica de como criar objetos a partir de uma classe e acessar seus métodos. Em um cenário real, é comum uso de diversas outras funcionalidades da POO, mas para fins de compreensão, o exemplo foi mantido o mais simples possível.
-
+> O exemplo é intencionalmente simples, com foco didático.
 
 > [!NOTE]
-> O acesso aos atributos e métodos de um objeto é feito utilizando a notação de ponto (`.`). Por exemplo, `q1.lado1` acessa o atributo `lado1` do objeto `q1`, e `q1.calcularArea()` chama o método `calcularArea()` do mesmo objeto. Essa notação é fundamental para interagir com os objetos criados a partir de uma classe.
+> O acesso a atributos e métodos é realizado por notação de ponto (`.`), por exemplo: `q1.lado1` e `q1.calcularArea()`.
 
 > [!TIP]
-> recaptulação: 
-> |            |  Descrição   |
-> | ---------- | ------------ |
-> | `classe`   | molde ou estrutura que define as características e comportamentos de um tipo específico de objeto. |
-> | `objeto`   | instância de uma classe, que possui as características e comportamentos definidos pela classe. |
-> | `atributo` | variável que pertence a um objeto/classe e armazena informações sobre o objeto. |
-> | `método`   | função que pertence a um objeto/classe e define um comportamento que o objeto pode realizar. |
-
+> Recapitulação:
+>
+> | Termo      | Descrição |
+> | ---------- | --------- |
+> | `classe`   | Molde que define características e comportamentos. |
+> | `objeto`   | Instância de uma classe. |
+> | `atributo` | Variável pertencente ao objeto/classe. |
+> | `método`   | Função pertencente ao objeto/classe. |
 
 ## Construtor
 
-O construtor é um método especial de uma classe que é chamado automaticamente quando um objeto é criado a partir dessa classe. Ele é usado para inicializar os atributos do objeto e pode receber parâmetros para configurar o estado inicial do objeto. O construtor é definido usando a palavra-chave `constructor` e pode ser sobrecarregado para permitir diferentes formas de criar objetos.
-
-Logo após o uso do `new` para criar um objeto, o construtor é executado, isso permite que o objeto seja manipulado antes mesmo de ser referenciado por uma variável ou constante. Por exemplo:
+O construtor é um método especial chamado automaticamente na criação do objeto. Seu objetivo principal é inicializar atributos e garantir estado inicial válido.
 
 ```typescript
 class Pessoa {
@@ -216,7 +189,7 @@ class Pessoa {
 }
 ```
 
-No exemplo acima, a classe `Pessoa` possui um construtor que recebe dois parâmetros (`paramNome` e `paramIdade`) para inicializar os atributos `nome` e `idade` do objeto. Quando criamos um objeto do tipo `Pessoa`, o construtor é chamado automaticamente para configurar o estado inicial do objeto:
+Uso:
 
 ```typescript
 const pessoa1 = new Pessoa("Alice", 30);
@@ -224,11 +197,9 @@ console.log(pessoa1.nome); // Saída: Alice
 console.log(pessoa1.idade); // Saída: 30
 ```
 
-Sem o construtor, teríamos que criar o objeto e depois atribuir os valores aos atributos, o que seria menos eficiente e mais propenso a erros. O construtor garante que o objeto seja criado em um estado válido desde o início.
+Sem construtor explícito, valores essenciais podem ficar ausentes, aumentando risco de inconsistência.
 
-Neste caso não faz sentido criar um objeto do tipo `Pessoa` sem fornecer um nome e uma idade, por isso o construtor é essencial para garantir que o objeto seja criado com as informações necessárias.
-
-Considere o exemplo do `Quadrilatero` que vimos anteriormente. Não faz sentido criar um objeto do tipo `Quadrilatero` sem fornecer os valores dos lados, pois isso resultaria em um objeto incompleto e sem funcionalidade. Para resolver isso, podemos definir um construtor na classe `Quadrilatero` que exija os valores dos lados no momento da criação do objeto:
+Exemplo com `Quadrilatero`:
 
 ```typescript
 class Quadrilatero {
@@ -254,98 +225,50 @@ class Quadrilatero {
 }
 ```
 
-Agora a construção do objeto `Quadrilatero` exige que os valores dos lados sejam fornecidos, garantindo que o objeto seja criado em um estado válido e funcional:
-
 ```typescript
 const q1 = new Quadrilatero(5, 10);
 console.log(q1.calcularArea()); // Saída: 50
 console.log(q1.calcularPerimetro()); // Saída: 30
 console.log(q1.eQuadrado()); // Saída: false
-
-const q2 = new Quadrilatero(7, 7);
-console.log(q2.calcularArea()); // Saída: 49
-console.log(q2.calcularPerimetro()); // Saída: 28
-console.log(q2.eQuadrado()); // Saída: true
 ```
-
-> [!NOTE]
-> Nos exemplos acima, o construtor é utilizado para garantir que os objetos sejam criados com os valores necessários para que possam funcionar corretamente. Mas vale ressaltar que o construtor permite a execução de qualquer código necessário para configurar o estado inicial do objeto, não se limitando apenas à atribuição de valores aos atributos. Ele pode incluir validações, chamadas a outros métodos, ou qualquer lógica necessária para garantir que o objeto seja criado em um estado consistente e funcional.
-
-> [!NOTE]
-> A omissão do construtor em uma classe não impede a criação de objetos a partir dessa classe, mas pode resultar em objetos incompletos ou sem funcionalidade, dependendo do contexto. Se a classe não tiver um construtor definido, o TypeScript fornecerá um construtor padrão que não recebe parâmetros e não inicializa os atributos. Isso pode ser problemático se os atributos forem essenciais para o funcionamento do objeto, pois eles permanecerão indefinidos ou com valores padrão (como `undefined` para tipos primitivos), o que pode levar a erros durante a execução do programa.
 
 ## Herança
 
-Com a finalidade de promover a reutilização de código e estabelecer relações hierárquicas entre classes, a POO utiliza o conceito de herança. A herança permite que uma classe (chamada de classe filha ou subclasse) herde atributos e métodos de outra classe (chamada de classe pai ou superclasse). Isso significa que a subclasse pode usar e modificar os comportamentos definidos na superclasse, além de adicionar seus próprios atributos e métodos.
-
-Considerando o exemplo da classe `Quadrilatero`, podemos criar uma subclasse chamada `Quadrado` que herda os atributos e métodos de `Quadrilatero`, mas também adiciona suas próprias características específicas:
+A herança promove reutilização de código e organização hierárquica entre classes.
 
 ```typescript
 class Quadrado extends Quadrilatero {
   constructor(paramLado: number) {
-    // Chama o construtor da classe pai (Quadrilatero) 
-    // para inicializar os lados
-    super(paramLado, paramLado); 
+    super(paramLado, paramLado);
   }
 
   eQuadrado(): boolean {
-    // Um quadrado é sempre um quadrilátero, mas um quadrilátero 
-    // nem sempre é um quadrado
-    return true; 
+    return true;
   }
 }
 ```
 
-Neste exemplo de herança, a classe `Quadrado` estende a classe `Quadrilatero`, o que significa que ela herda os atributos `lado1` e `lado2`, bem como os métodos `calcularArea()`, `calcularPerimetro()` e `eQuadrado()`. No entanto, a classe `Quadrado` redefine o método `eQuadrado()` para sempre retornar `true`, e o construtor recebe apenas um parâmetro (o lado do quadrado) e chama o construtor da classe pai usando `super(paramLado, paramLado)`, fazendo com que ambos os lados sejam iguais, o que é uma característica de um quadrado.
-
-Veja como podemos criar objetos do tipo `Quadrado` e acessar seus métodos:
-
-```typescript
-const quadrado1 = new Quadrado(5);
-console.log(quadrado1.calcularArea()); // Saída: 25
-console.log(quadrado1.calcularPerimetro()); // Saída: 20
-console.log(quadrado1.eQuadrado()); // Saída: true
-```
+A subclasse `Quadrado` herda atributos e métodos de `Quadrilatero`, mas redefine comportamento específico quando necessário.
 
 > [!NOTE]
-> A palavra “herança” pode ser um pouco confusa, pois não significa que a subclasse “herda” fisicamente o código da superclasse. Na prática, ela passa a ter acesso aos atributos e métodos definidos na superclasse.
->
-> Ou seja, a subclasse pode utilizar os recursos da superclasse como se fossem seus, mas o código não é copiado. A herança é uma relação entre classes, em que a subclasse reutiliza comportamentos da superclasse sem duplicação de código.
->
-> Além disso, objetos criados a partir da subclasse podem ser tratados como objetos da superclasse. Ainda assim, o código da superclasse permanece nela e não é duplicado na subclasse.
->
-> Basicamente se um atributo ou método existe na superclasse e não é redefinido na subclasse, esta utilizará o comportamento definido na superclasse. Se a subclasse redefinir um método da superclasse, ela fornecerá uma nova implementação para esse método, mas o código original da superclasse ainda estará lá e poderá ser acessado usando `super`.
+> Herança não significa cópia física de código, e sim reutilização por relação entre classes. A superclasse permanece como origem dos comportamentos herdados.
 
-Aqui é possível observar que teremos uma falha de abstração, pois os valores dos atributos `lado1` e `lado2` da classe `Quadrilatero` podem ser acessados diretamente, o que permite que na classe `Quadrado` seja possível modificar um dos lados, tornando o objeto inconsistente com a definição de um quadrado. Para resolver isso, é necessário utilizar o conceito de encapsulamento, que será abordado a seguir.
+## Encapsulamento
 
-## Encapsulamento 
+O encapsulamento protege o estado interno da classe, controlando acesso por modificadores (`public`, `private`, `protected`).
 
-Para garantir abstratividade e segurança dos dados, a POO utiliza o conceito de encapsulamento, que consiste em ocultar os detalhes internos de uma classe e expor apenas o necessário para o uso externo. Isso é feito utilizando modificadores de acesso (como `private`, `protected` e `public`) para controlar a visibilidade dos atributos e métodos.
+| Modificador | Descrição | Acesso |
+| ----------- | --------- | ------ |
+| `public`    | Acessível de qualquer lugar. | Dentro e fora da classe. |
+| `private`   | Acessível apenas na classe. | Apenas dentro da classe. |
+| `protected` | Acessível na classe e em subclasses. | Classe e subclasses. |
 
-| Modificador de Acesso | Descrição | Acesso |
-| --------------------- | --------- | ----- |
-| `public`              | O atributo ou método é acessível de qualquer lugar. | Acessível de dentro e fora da classe. |
-| `private`             | O atributo ou método é acessível apenas dentro da própria classe. | Acessível apenas de dentro da classe. |
-| `protected`           | O atributo ou método é acessível dentro da classe e por classes derivadas (subclasses). | Acessível de dentro da classe e por subclasses. |
-
-O exemplo da classe `Quadrado` que herda de `Quadrilatero` demonstra como o encapsulamento pode ser importante, veja no exemplo abaixo, onde os atributos `lado1` e `lado2` podem fazer com que o objeto `Quadrado` se torne inconsistente:
-
-```typescript
-const quadradoInconsistente = new Quadrado(5);
-// Modificando lado1 para 15 tornando o objeto 
-// inconsistente com a definição de um quadrado
-quadradoInconsistente.lado1 = 10; 
-
-console.log(quadradoInconsistente.calcularArea()); // Saída: 50
-console.log(quadradoInconsistente.eQuadrado()); // Saída: true (apesar de não ser um quadrado)
-``` 
-
-Isso acontece porque os atributos `lado1` e `lado2` da classe `Quadrilatero` são públicos, o que permite que sejam modificados diretamente, mesmo em um objeto do tipo `Quadrado`. Para resolver esse problema, podemos tornar os atributos privados e fornecer métodos de acesso (getters e setters) para controlar a modificação dos lados:
+Sem encapsulamento, estados inválidos podem ser introduzidos em objetos.
 
 ```typescript
 class Quadrilatero {
-  private lado1: number; // Tornando o atributo lado1 privado
-  private lado2: number; // Tornando o atributo lado2 privado
+  private lado1: number;
+  private lado2: number;
 
   constructor(paramLado1: number, paramLado2: number) {
     this.lado1 = paramLado1;
@@ -364,50 +287,16 @@ class Quadrilatero {
     return this.lado1 === this.lado2;
   }
 }
-
-class Quadrado extends Quadrilatero {
-  constructor(paramLado: number) {
-    super(paramLado, paramLado);
-  }
-
-  eQuadrado(): boolean {
-    return true;
-  }
-}
 ```
 
-Com a adição do modificador `private` aos atributos `lado1` e `lado2`, eles não podem mais ser acessados ou modificados diretamente de fora da classe `Quadrilatero`. Isso garante que os objetos do tipo `Quadrado` permaneçam consistentes com a definição de um quadrado, pois os lados só podem ser definidos no momento da criação do objeto através do construtor, e não podem ser alterados posteriormente.
-
-Neste caso se os valores de `lado1` e `lado2` tentarem ser acessados ou modificados diretamente, o TypeScript irá gerar um erro de compilação, indicando que os atributos são privados e não podem ser acessados fora da classe. Isso reforça a importância do encapsulamento para garantir a integridade dos objetos e evitar estados inconsistentes.
-
-Veja o exemplo de tentativa de acesso aos atributos privados:
-
-```typescript
-const quadradoInconsistente = new Quadrado(5);
-
-// Tentativa de acessar o atributo privado lado1
-// Erro: Atributo 'lado1' é privado e só pode ser 
-//       acessado dentro da classe 'Quadrilatero'.
-console.log(quadradoInconsistente.lado1); 
-
-// Tentativa de modificar o atributo privado lado1
-// Erro: Atributo 'lado1' é privado e só pode ser 
-//        acessado dentro da classe 'Quadrilatero'.
-quadradoInconsistente.lado1 = 10; 
-```
-
-Mas isso leva a outra situação adversa, pois existem caso que se faz necessário acessar ou modificar os atributos privados, por isso existem os métodos de acesso (getters e setters) que permitem controlar o acesso aos atributos privados, garantindo que as modificações sejam feitas de forma controlada e consistente.
+Com `private`, o TypeScript impede acesso externo direto e reforça consistência do objeto.
 
 ## Getters e Setters
 
-Os **getters** e **setters** são métodos usados para ler e alterar atributos privados de forma controlada.
+Getters e setters permitem leitura e escrita controladas de atributos privados.
 
-- **Getter**: retorna o valor de um atributo.
-- **Setter**: altera o valor de um atributo, podendo aplicar validações antes da alteração.
-
-Isso mantém o encapsulamento, pois o atributo continua privado, mas a classe ainda oferece uma forma segura de interação.
-
-Considere o exemplo abaixo:
+- **Getter**: retorna valor.
+- **Setter**: altera valor com validação.
 
 ```typescript
 class Quadrilatero {
@@ -428,16 +317,12 @@ class Quadrilatero {
   }
 
   setLado1(novoLado1: number): void {
-    if (novoLado1 <= 0) {
-      throw new Error("lado1 deve ser maior que zero.");
-    }
+    if (novoLado1 <= 0) throw new Error("lado1 deve ser maior que zero.");
     this.lado1 = novoLado1;
   }
 
   setLado2(novoLado2: number): void {
-    if (novoLado2 <= 0) {
-      throw new Error("lado2 deve ser maior que zero.");
-    }
+    if (novoLado2 <= 0) throw new Error("lado2 deve ser maior que zero.");
     this.lado2 = novoLado2;
   }
 
@@ -447,34 +332,9 @@ class Quadrilatero {
 }
 ```
 
-Uso:
+### Getters e Setters em JavaScript/TypeScript
 
-```typescript
-const q = new Quadrilatero(5, 10);
-
-console.log(q.getLado1()); // Saída: 5
-console.log(q.getLado2()); // Saída: 10
-
-q.setLado1(8);
-console.log(q.calcularArea()); // Saída: 80
-
-// q.setLado2(-3); // Erro: lado2 deve ser maior que zero.
-```
-
-> [!NOTE]
-> O principal benefício dos setters não é apenas “trocar valor”, mas sim **garantir regras de negócio** (por exemplo, impedir valores inválidos).
-
-> [!TIP]
-> Em TypeScript também existe a sintaxe `get` e `set` (como propriedades), mas o uso de métodos explícitos `getX()` e `setX()` costuma ser mais didático no início do aprendizado de POO.
-
-| Método | Função |
-| ------ | ------ |
-| Getter | Permite leitura controlada do atributo privado. |
-| Setter | Permite escrita controlada do atributo privado com validação. |
-
-### Getters e Setters em Javascript/TypeScript
-
-Em javascript e typescript, é possível usar a sintaxe de propriedades para criar getters e setters de forma mais elegante. isso permite acessar os getters e setters como se fossem atributos comuns, mas na verdade eles são métodos que executam lógica adicional.
+Também é possível utilizar sintaxe de propriedades com `get` e `set`:
 
 ```typescript
 class Quadrilatero {
@@ -482,8 +342,8 @@ class Quadrilatero {
   private _lado2: number;
 
   constructor(paramLado1: number, paramLado2: number) {
-    this.lado1 = paramLado1; // Usando o setter
-    this.lado2 = paramLado2; // Usando o setter
+    this.lado1 = paramLado1;
+    this.lado2 = paramLado2;
   }
 
   get lado1(): number {
@@ -491,9 +351,7 @@ class Quadrilatero {
   }
 
   set lado1(novoLado1: number) {
-    if (novoLado1 <= 0) {
-      throw new Error("lado1 deve ser maior que zero.");
-    }
+    if (novoLado1 <= 0) throw new Error("lado1 deve ser maior que zero.");
     this._lado1 = novoLado1;
   }
 
@@ -502,140 +360,68 @@ class Quadrilatero {
   }
 
   set lado2(novoLado2: number) {
-    if (novoLado2 <= 0) {
-      throw new Error("lado2 deve ser maior que zero.");
-    }
+    if (novoLado2 <= 0) throw new Error("lado2 deve ser maior que zero.");
     this._lado2 = novoLado2;
   }
 
   get area(): number {
-    return this.lado1 * this.lado2; // Usando os getters
+    return this.lado1 * this.lado2;
   }
 }
-
-> [!TIP]
-> `area`, `lado1` e `lado2` são propriedades, mas na verdade necessitam de lógica adicional para leitura e escrita, por isso são implementados como getters e setters. Isso permite acessar `q.area` como se fosse um atributo, mas na verdade ele executa a lógica de cálculo da área.
+```
 
 ## Métodos e atributos estáticos
 
-Métodos e atributos estáticos pertencem à classe em si, e não a instâncias específicas. Eles podem ser acessados diretamente pela classe, sem a necessidade de criar um objeto.
+Métodos e atributos estáticos pertencem à classe, não às instâncias. Seu acesso ocorre diretamente pelo nome da classe e é indicado para comportamentos que não dependem do estado de um objeto específico.
 
-Eles existem para representar comportamentos ou características que são comuns a todas as instâncias da classe, ou para fornecer funcionalidades auxiliares relacionadas à classe, mas que **não dependem do estado de um objeto específico**.
+---
 
+```typescript
+class Quadrado {
+  lado: number;
 
+  constructor(lado: number) {
+    this.lado = lado;
+  }
 
+  area(): number {
+    return this.lado * this.lado;
+  }
 
-... [isso é tema para a próxima aula] ... see you space cowboy!
+  perimetro(): number {
+    return 4 * this.lado;
+  }
 
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
-------
+  setLado(lado: number): void {
+    this.lado = lado;
+  }
 
+  getLado(): number {
+    return this.lado;
+  }
 
->>> ```typescript
->>> class Quadrado {
->>>     lado: number;
->>> 
->>>     constructor(lado: number) {
->>>         this.lado = lado;
->>>     }
->>> 
->>>     area(): number {
->>>         return this.lado * this.lado;
->>>     }
->>> 
->>>     perimetro(): number {
->>>         return 4 * this.lado;
->>>     }
->>> 
->>>     setLado(lado: number): void {
->>>         this.lado = lado;
->>>     }
->>> 
->>>     getLado(): number {
->>>         return this.lado;
->>>     }
->>> 
->>>     toString(): string {
->>>         return `Quadrado de lado ${this.lado}`;
->>>     }
->>> 
->>>     equals(outro: Quadrado): boolean {
->>>         return this.lado === outro.lado;
->>>     }
->>> 
->>>     clone(): Quadrado {
->>>         return new Quadrado(this.lado);
->>>     }
->>> 
->>>     static criarQuadrado(lado: number): Quadrado {
->>>         return new Quadrado(lado);
->>>     }
->>> 
->>>     static comparar(quadrado1: Quadrado, quadrado2: Quadrado): boolean {
->>>         return quadrado1.lado === quadrado2.lado;
->>>     }
->>> 
->>>     static calcularArea(lado: number): number {
->>>         return lado * lado;
->>>     }
->>> }
->>> ```
+  toString(): string {
+    return `Quadrado de lado ${this.lado}`;
+  }
+
+  equals(outro: Quadrado): boolean {
+    return this.lado === outro.lado;
+  }
+
+  clone(): Quadrado {
+    return new Quadrado(this.lado);
+  }
+
+  static criarQuadrado(lado: number): Quadrado {
+    return new Quadrado(lado);
+  }
+
+  static comparar(quadrado1: Quadrado, quadrado2: Quadrado): boolean {
+    return quadrado1.lado === quadrado2.lado;
+  }
+
+  static calcularArea(lado: number): number {
+    return lado * lado;
+  }
+}
+```
