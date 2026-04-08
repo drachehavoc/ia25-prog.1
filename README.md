@@ -29,26 +29,28 @@ A POO permite organizar o código de forma modular e reutilizável, facilitando 
 
 ## Conceitos fundamentais da POO
 
-- Classe  
-  - Classes abstratas  
-  - Interface  
-- Objeto  
-- Atributo  
-- Método  
-  - Sobrescrita de método (override)  
-  - Sobrecarga (overload)  
-- Getters e Setters  
-- Encapsulamento  
-  - Modificadores de acesso (`public`, `private`, `protected`)  
-  - Imutabilidade (`readonly`)  
-- Construtor  
-- Métodos estáticos (`static`)  
-- Herança  
-- Composição  
-  - Associação  
-  - Agregação  
-- Polimorfismo  
-- Abstração  
+- [x] Classe  
+- [x] Objeto  
+- [x] Atributo  
+- [x] Método  
+  - [ ] Sobrescrita (override)    
+  - [ ] Sobrecarga (overload)  
+- [x] Getters e Setters  
+- [x] Encapsulamento  
+  - [x] Modificadores de acesso (`public`, `private`, `protected`)  
+  - [ ] Imutabilidade (`readonly`)  
+- [x] Construtor  
+- [x] Métodos e Atributos estáticos (`static`)  
+- [x] Herança  
+- [ ] Polimorfismo  
+- [ ] Abstração  
+  - [ ] Classes abstratas  
+  - [ ] Interface  
+- [ ] Composição  
+  - [ ] Associação  
+  - [ ] Agregação
+
+> O conteúdo marcado com "`[x]`" já foi abordado, enquanto o conteúdo marcado com "`[ ]`" ainda será tratado em futuras versões deste texto.
 
 ## Conhecimento prévio necessário
 
@@ -374,54 +376,36 @@ class Quadrilatero {
 
 Métodos e atributos estáticos pertencem à classe, não às instâncias. Seu acesso ocorre diretamente pelo nome da classe e é indicado para comportamentos que não dependem do estado de um objeto específico.
 
----
-
 ```typescript
 class Quadrado {
-  lado: number;
+  private _lado: number;
 
-  constructor(lado: number) {
-    this.lado = lado;
+  constructor(paramLado: number) {
+    this.lado = paramLado;
   }
 
-  area(): number {
+  get lado(): number {
+    return this._lado;
+  }
+
+  set lado(novoLado: number) {
+    if (novoLado <= 0) throw new Error("lado deve ser maior que zero.");
+    this._lado = novoLado;
+  }
+
+  get area(): number {
     return this.lado * this.lado;
   }
 
-  perimetro(): number {
-    return 4 * this.lado;
-  }
-
-  setLado(lado: number): void {
-    this.lado = lado;
-  }
-
-  getLado(): number {
-    return this.lado;
-  }
-
-  toString(): string {
-    return `Quadrado de lado ${this.lado}`;
-  }
-
-  equals(outro: Quadrado): boolean {
-    return this.lado === outro.lado;
-  }
-
-  clone(): Quadrado {
-    return new Quadrado(this.lado);
-  }
-
-  static criarQuadrado(lado: number): Quadrado {
-    return new Quadrado(lado);
-  }
-
-  static comparar(quadrado1: Quadrado, quadrado2: Quadrado): boolean {
-    return quadrado1.lado === quadrado2.lado;
-  }
-
-  static calcularArea(lado: number): number {
-    return lado * lado;
+  static maiorArea(q1: Quadrado, q2: Quadrado, ..qn: Quadrado[]): Quadrado {
+    let maior = q1;
+    const quadrados = [q1, q2, ...n];
+    for (const q of quadrados) {
+      if (q.area > maior.area) {
+        maior = q;
+      }
+    }
+    return maior;
   }
 }
 ```
