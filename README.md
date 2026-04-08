@@ -19,7 +19,7 @@
     - Herança
     - Encapsulamento
     - Polimorfismo
-- Leitura e melhorias dos textos:
+- Leitura e elaboração de perguntas:
   - Programação 1 - Programação Orientada a Objetos (POO)
 
 # Programação 1 - Programação Orientada a Objetos (POO)
