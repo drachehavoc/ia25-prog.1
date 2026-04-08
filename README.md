@@ -5,6 +5,9 @@
     - HTML (para o eu do futuro)
     - CSS (para o eu do futuro)
     - JS (para o eu do futuro)
+  - Projeto de site pessoal (Perfil)
+    - Versão professor
+    - Versão pessoal
   - Diferenças entre Java, JS (JavaScript) e TS (TypeScript)
   - POO
     - Classe
