@@ -12,6 +12,16 @@ class Personagem {
 
 // <stage> 0
 
+// const personagem1 = new Personagem("Alice");
+// const personagem2 = new Personagem("Bob");
+// const personagem3 = new Personagem("Charlie");
+
+// console.log(personagem1.nome);
+// console.log(personagem2.nome);
+// console.log(personagem3.nome);
+
+// <stage> 0.5
+
 // const listaPersonagens: Personagem[] = [
 //   new Personagem("Alice"),
 //   new Personagem("Bob"),
