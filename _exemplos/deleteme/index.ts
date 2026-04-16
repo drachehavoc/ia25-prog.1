@@ -10,10 +10,24 @@ class Personagem {
   }
 }
 
+// <stage> 0
 
-// CLI - command line interface
-// TUI - text user interface
-// GUI - graphical user interface
+// const listaPersonagens: Personagem[] = [
+//   new Personagem("Alice"),
+//   new Personagem("Bob"),
+//   new Personagem("Charlie"),
+//   new Personagem("Diana"),
+//   new Personagem("Eve"),
+//   new Personagem("Frank"),
+//   new Personagem("Grace"),
+//   new Personagem("Heidi"),
+//   new Personagem("Ivan"),
+//   new Personagem("Judy"),
+// ]
+
+// for (const personagem of listaPersonagens) { 
+//   console.log('- ', personagem.nome);
+// }
 
 // <stage> 1
 
@@ -23,93 +37,89 @@ class Personagem {
 //   const nome = prompt("Digite o nome do personagem (ou 'sair' para encerrar):");
 
 //   if (nome === null) {
-//     console.error("[error] Entrada inválida. Por favor, tente novamente.");
+//     console.log("[erro] Nome inválido.");
 //     continue;
-//   }
+//   } 
 
-//   if (nome === 'sair') {
+//   if (nome.toLowerCase() === "sair") {
 //     break;
 //   }
 
-//   const personagem = new Personagem(nome);
-//   listaPersonagens.push(personagem);
-//   console.log(`Personagem "${personagem.nome}" adicionado à lista!`);
+//   const novoPersonagem = new Personagem(nome);
+//   listaPersonagens.push(novoPersonagem);
+//   console.log(`Personagem "${novoPersonagem.nome}" adicionado à lista.`);
 // }
 
-// console.clear();
 // for (const personagem of listaPersonagens) {
-//   console.log(`- ${personagem.nome}`);
+//   console.log('- ', personagem.nome);
 // }
 
-// console.log("See you space cowboy!");
-
-
-
+// console.log("See you later space cowboy...");
 
 // <stage> 2
 
 const listaPersonagens: Personagem[] = [];
 
-function menu() {
+function mostrarMenu() {
   console.clear();
-  console.log("=== Menu ===");
+  console.log("======= Menu =======");
   console.log("1. Adicionar personagem");
   console.log("2. Listar personagens");
   console.log("3. Sair");
+  return prompt("Escolha uma opção:");
 }
 
 function adicionarPersonagem() {
-  console.clear();
-  console.log("=== Adicionar Personagem ===");
-  
   const nome = prompt("Digite o nome do personagem:");
   
   if (nome === null) {
-    console.error("[error] Entrada inválida. Por favor, tente novamente.");
+    prompt("Nome inválido. Pressione Enter para continuar.");
     return;
   }
 
-  const personagem = new Personagem(nome);
-  listaPersonagens.push(personagem);
-  console.log(`Personagem "${personagem.nome}" adicionado à lista!`);
+  const novoPersonagem = new Personagem(nome);
+  listaPersonagens.push(novoPersonagem);
 }
 
 function listarPersonagens() {
   console.clear();
-  console.log("=== Lista de Personagens ===");
-  
+  console.log("======= Lista de Personagens =======");
+
   if (listaPersonagens.length === 0) {
-    console.log("Nenhum personagem adicionado ainda.");
+    console.log("Nenhum personagem adicionado.");
+    prompt("Pressione Enter para continuar.");
     return;
   }
 
   for (const personagem of listaPersonagens) {
-    console.log(`- ${personagem.nome}`);
+    console.log('- ', personagem.nome);
   }
+
+  prompt("Pressione Enter para continuar.");
 }
 
 while (true) {
-  menu();
-  const escolha = prompt("Escolha uma opção:");
-  
-  if (escolha === null) {
-    console.error("[error] Entrada inválida. Por favor, tente novamente.");
+  const opcao = mostrarMenu();
+
+  if (opcao === null) {
+    console.log("[erro] Opção inválida.");
     continue;
   }
 
-  if (escolha === '1') {
+  if (opcao === "1") {
     adicionarPersonagem();
     continue;
   }
 
-  if (escolha === '2') {
+  if (opcao === "2") {
     listarPersonagens();
-    prompt("Pressione Enter para voltar ao menu...");
     continue;
   }
 
-  if (escolha === '3') {
-    console.log("See you space cowboy!");
-    break;
+  if (opcao === "3") {
+    console.log("See you later space cowboy...");
+    process.exit(0);
   }
+
+  prompt("[erro] Opção inválida. pressione Enter para continuar.");
 }
