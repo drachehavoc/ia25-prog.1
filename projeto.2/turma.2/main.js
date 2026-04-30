@@ -11,12 +11,16 @@ function criarTarefa(texto) {
   const btnExcluir = tarefa.querySelector('button')
   spanTitle.textContent = texto
   containerTarefas.appendChild(tarefa)
-  btnExcluir.onclick = () => btnExcluir.closest('.tarefa').remove()
+  btnExcluir.addEventListener('click', () => btnExcluir.closest('.tarefa').remove())
 }
 
-// btnAdicionar.addEventListener('click', () => {})
-btnAdicionar.onclick = function () {
+btnAdicionar.addEventListener('click', () => {
   const texto = inputAdicionar.value.trim()
   criarTarefa(texto)
   inputAdicionar.value = ''
-}
+})
+
+inputAdicionar.addEventListener('keypress', (evt) => {
+  if (evt.key !== 'Enter') return;
+  btnAdicionar.click()
+})
