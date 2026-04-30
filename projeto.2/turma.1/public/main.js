@@ -10,17 +10,13 @@ function criarTarefa(texto) {
   const spanTitle = tarefa.querySelector('span');
   const btnExcluir = tarefa.querySelector('button');
   spanTitle.textContent = texto;
+  btnExcluir.onclick = () => btnExcluir.closest('.tarefa').remove();
   containerTarefas.appendChild(tarefa);
-  // não feito aula passada
-  btnExcluir.onclick = function () {
-    this.closest('.tarefa').remove();
-  }
 }
 
 // btnAdicionar.addEventListener('click', () => {})
 btnAdicionar.onclick = function () {
   const texto = inputTarefa.value.trim();
   criarTarefa(texto);
-  // não feito aula passada
   inputTarefa.value = '';
 }
